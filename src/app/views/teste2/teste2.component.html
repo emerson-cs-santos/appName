@@ -1,0 +1,13 @@
+<p>Teste 2 - Consulta de CEP</p>
+
+<div>
+  <input type="text" [(ngModel)]="cep">
+  <button (click)="consultarCEP()">Buscar</button>
+</div>
+
+<div *ngIf="cepRetornoExibir && cepRetornoExibir.logradouro">
+  <p>Logradouro: {{cepRetornoExibir.logradouro}}</p>
+  <p>Bairro: {{cepRetornoExibir.bairro}}</p>
+  <p>Cidade: {{cepRetornoExibir.localidade}}</p>
+  <p>UF: {{cepRetornoExibir.uf}}</p>
+</div>

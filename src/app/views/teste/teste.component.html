@@ -1,0 +1,23 @@
+<p class="cor">teste works! - {{teste}}</p>
+
+<div>
+  <button (click)="exibirTestes(true)"> Exibir Testes </button>
+  <button (click)="exibirTestes(false)"> Não exibir Testes </button>
+</div>
+
+<div *ngIf="exibir">
+  <p>teste 1</p>
+  <p>teste 2</p>
+</div>
+
+<div>
+  <ul *ngFor="let item of lista; let i = index">
+    <li>{{i}}-{{item}}</li>
+  </ul>
+</div>
+
+<div [ngSwitch]="valorTestar">
+  <p *ngSwitchCase="'valor1'">1</p>
+  <p *ngSwitchCase="'valor2'">2</p>
+  <p *ngSwitchDefault>Valor Padrão Switch</p>
+</div>
